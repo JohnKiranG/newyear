@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!-- 
+  - Playing audio from youtube url
+  - Playing audio from certain time
+  - Getting these properties from website url
+  - Hanlding if url / time not present
+ -->
+
+<head>
+    <!-- Youtube Iframe API -->
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+<body>
+    <div data-video="https://youtu.be/PoVIpQv810s" data-starttime="35" id="youtube-audio"></div>
+    <audio src="defaultSong.mp3" loop id="defaultSong"></audio> 
+    <button onclick="toggleAudio()">Play</button>
+
+    <script>
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var youtubeurl = url.searchParams.get("youtubeurl");
+        var startTime = url.searchParams.get("starttime");
+        var player;
+
+        var myAudio = document.getElementById("defaultSong");
+        var isPlaying = false;
+
+        function toggleDefaultSong() {
+            isPlaying ? myAudio.pause() : myAudio.play();
+        };
+
+        myAudio.onplaying = function() {
+            isPlaying = true;
+        };
+
+        myAudio.onpause = function() {
+            isPlaying = false;
+        };
+
+        function onYouTubeIframeAPIReady() {
+            if(youtubeurl) {
+                var ctrlq = document.getElementById("youtube-audio");
+                ctrlq.innerHTML = '<div id="youtube-player"></div>';
+                player = new YT.Player('youtube-player', {
+                    height: '0',
+                    width: '0',
+                    videoId: youtubeurl.replace("https://youtu.be/", ""),
+                    playerVars: {
+                        autoplay: 0,
+                        loop: 1,
+                        start: startTime ? startTime : 0
+                    },
+                    events: {
+                        'onReady': onPlayerReady
+                    } 
+                });
+            }
+        } 
+
+        function toggleAudio() {
+            if(youtubeurl) {
+                if ( player.getPlayerState() == 1 || player.getPlayerState() == 3 ) {
+                    player.pauseVideo(); 
+                } else {
+                    player.playVideo();                
+                } 
+            } else {
+                toggleDefaultSong();
+            }
+        } 
+    
+        function onPlayerReady(event) {
+            player.setPlaybackQuality("small");
+            document.getElementById("youtube-audio").style.display = "block";            
+        }
+  </script>
+</body>
+
